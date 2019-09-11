@@ -35,15 +35,16 @@ public class ChatFragment extends Fragment {
         return view;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
 
     @OnClick(R.id.tv)
     public void onViewClicked() {
         Toast.makeText(getContext(), "点击了我", Toast.LENGTH_SHORT).show();
         L.d("点击了我");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 }
